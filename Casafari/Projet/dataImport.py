@@ -15,7 +15,7 @@ def import_built_used_area(conn):
      used_area INT)
      """)
      
-    file = open("C:/Users/rlang/workspace_nouveau/Casafari/Data/Built_used_area.csv","rt")
+    file = open("C:/Users/rlang/git/Casafari/Casafari/Data/Built_used_area.csv","rt")
     reader = csv.DictReader(file,fieldnames=None, restkey=None, restval=None, delimiter=';')
     
     for row in reader :
@@ -33,7 +33,7 @@ def import_details(conn):
     )
     """)
      
-    file = open("C:/Users/rlang/workspace_nouveau/Casafari/Data/Details.csv","rt")
+    file = open("C:/Users/rlang/git/Casafari/Casafari/Data/Details.csv","rt")
     reader = csv.DictReader(file,fieldnames=None, restkey=None, restval=None, delimiter=';')
     
     for row in reader :
@@ -52,7 +52,7 @@ def import_price_changes(conn):
        )
        """)
     
-    file = open("C:/Users/rlang/workspace_nouveau/Casafari/Data/Price_changes.csv","rt")
+    file = open("C:/Users/rlang/git/Casafari/Casafari/Data/Price_changes.csv","rt")
     reader = csv.DictReader(file,fieldnames=None, restkey=None, restval=None, delimiter=';')
     for row in reader :
         cursor.execute("INSERT INTO PriceChanges VALUES (?,?,?,?)",[row["listing_id"],row["old_price"],row["new_price"],row["change_date"]])
