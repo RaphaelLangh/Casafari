@@ -1,0 +1,16 @@
+
+  dataImport module : 
+    for each .csv file, I create a SQLlite table  
+  
+  question1 module :
+    In question1, I used a SQL instruction to get the data from my 3 tables
+   
+  question2 module :
+   The idea is to generate for any real estate a model that predict the price at a date (YYYY-MM) and to calculate the average
+   the model I use is a linear model (sklearn) 
+   
+   I get the training data with the function "data_extraction", caculate the model for one real estate with "regress1" and iterate for any real estate
+   with "regresstot" and predict the average price with "predict_average"
+   
+   question3 module :
+   I select the data with "data_extraction" and use pyplot from matplotlib to generate a scatter plot 
